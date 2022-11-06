@@ -1,8 +1,8 @@
 /*
- * Superclass Shape maintain the common properties of all shapes
+ * This abstract superclass Shape contains an abstract method getArea(), tobe implemented by its subclasses
  */
 
-public class Shape {
+abstract public class Shape {
     // Private member variable
     private String color;
 
@@ -17,11 +17,10 @@ public class Shape {
         return "Shape[color=" + color + "]";
     }
 
-    // All shapes must provide a method called getArea()
-    public double getArea() {
-        // We have a problem here!
-        // We need to return some value to compile the program
-        System.err.println("Shape unknown! Cannot compute area!");
-        return 0;
-    }
+    // All shape's concrete subclasses must implement a method called getArea()
+    abstract public double getArea(); // If the subclass does not provide implementation to all the abstract methods of the superclass, the subclass remians abstract
+    // An abstract method cannot be declared final, as final method cannot be overridden
+    // An abstract method, on the other hand, must be overriden in a descendant before it can be used
+    // An abstract method cannot be private (which generates a compilation error)
+    // Thi is because private method are not visible to the subclass and thus cannot be overridden
 }

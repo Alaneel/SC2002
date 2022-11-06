@@ -1,7 +1,8 @@
 /*
- * The superclass Monster defines the expected common behaviors for its subclasses
+ * The abstract superclass Monster defines the expected common behaviors via abstract methods
  */
-public class Monster {
+
+abstract public class Monster {
     // Private instance variable
     private String name;
 
@@ -14,10 +15,6 @@ public class Monster {
         return this.name;
     }
 
-    // Defines a common behavior called attack() for all its subclasses
-    public String attack() {
-        return "!^_&@+%$* I don't know how to attack!";
-        // We have a problem here!
-        // We need to return a String; else, compilation error!
-    }
+    // Defines common behavior for all its subclasses
+    abstract public String attack(); 
 }

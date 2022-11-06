@@ -16,6 +16,8 @@ public class TestShape {
         System.out.println("Area is " + s2.getArea()); // Run Triangle's getArea()
         // Area is 10.0
 
-        // This poses a problem, if someone instantiate a Shape object and invoke the getArea from the Shape object, the program breaks
+        // Cannot create instance of an abstract class
+        // Shape s3 = new Shape("green");
+        // compilation error: Shape is abstract; cannot be instantiated
     }
 }
