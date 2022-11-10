@@ -5,6 +5,10 @@ class A {
     public static void bar() {
         System.out.println("A runs bar()");
     }
+    @Override
+    public String toString() {
+        return "This is A";
+    }
 }
 
 // This subclass inherits both static methods foo() and bar()
@@ -29,6 +33,7 @@ class B extends A {
 public class StaticInheritanceTest {
     public static void main(String[] args) {
         A a = new A();
+        System.out.println(a);
         // a.foo(); // A runs foo()
         A.foo(); // A runs foo()
         // a.bar(); // A runs bar()
@@ -45,6 +50,7 @@ public class StaticInheritanceTest {
 
         // Test Polymorphism
         A a1 = new B();
+        System.out.println(a1);
         // a1.foo(); // A runs bar() (non-polymorphic!)
         // a1.bar(); // A runs bar()
     }
