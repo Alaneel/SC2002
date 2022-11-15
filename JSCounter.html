@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Counter</title>
+</head>
+<body>
+    <form>
+        Count: <input id="tfCount" type="text" value="0">
+        <input id="btnCount" type="button" value="hello" onclick=myBtnOnClick() onmouseover=myBtnMouseOver() >
+    </form>
+    <script>
+        function myBtnOnClick() { tfCount.value++; }
+        function myBtnMouseOver() { btnCount.value = "Count Up"; }
+        function myBtnMouseOut() { btnCount.value = "Click Me"; }
+        btnCount.onmouseout = myBtnMouseOut; // assign a function to a variable
+    </script>
+</body>
+</html>
