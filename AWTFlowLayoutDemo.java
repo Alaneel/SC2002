@@ -1,5 +1,4 @@
 import java.awt.*;
-import java.awt.event.*;
 
 // An AWT GUI program inherits the top-level container java.awt.Frame
 public class AWTFlowLayoutDemo extends Frame {
